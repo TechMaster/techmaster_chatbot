@@ -2,23 +2,33 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 
+policies:
+  - name: "FallbackPolicy"
+    nlu_threshold: 0.4
+    core_threshold: 0.3
+    fallback_action_name: "action_default_fallback"
+
+
 intents:
+  ## chào hỏi thông thường
   - chao
   - tam_biet
-  - hoi_gio
-  - hoi_ngay
   - xac_nhan
   - tu_choi
   - vui
   - khong_vui
   - cam_on
+  
+  ## hỏi chung chung
+  - hoi_gio
+  - hoi_ngay
+  
+  ## tư vấn chung
   - can_tu_van
-  - nguoi_bat_dau
+  - nguoi_bat_dau  
+  
+  ## tán tỉnh bot
   - nghi_la_bot
-  - hoi_lich_khai_giang
-  - hoi_co_hoi_xin_viec
-  - quan_tam_web_front_end
-  - che_bot_ngu
   - khen_bot
   - hoi_ten_bot
   - hoi_tuoi
@@ -26,24 +36,48 @@ intents:
   - hoi_co_nguoi_yeu_chua
   - hoi_nha_o_dau
   - hoi_gioi_tinh
-  - xin_so_dien_thoai
-  - xin_so_hot_line
+  - xin_so_dien_thoai  
   - hoi_bot_hoc_o_dau
   - muon_gap_em
   - to_tinh
+  
+  ## xúc phạm bot
+  - che_bot_ngu
+  - chui_bot
+  - ham_doa_bot
+  
+  ## lịch học khai giảng
+  - hoi_lich_khai_giang
+
+  ## hỏi trung tâm
+  - hoi_hoc_o_dau
+  - hoi_gio_lam_viec
+  - co_so_ngoai_ha_noi
+  - giang_vien_la_ai
+  - xin_so_hot_line
+
+  ## mua khoá học
   - muon_dang_ky_hoc
   - hoi_cach_mua_khoa_hoc
   - muon_dong_tien_mat
-  - giang_vien_la_ai
-  - lo_lang_tuoi_cao_hoc_lap_trinh
-  - lo_lang_hoc_trai_nganh
-  - hoi_hoc_o_dau
+
+  ## hỏi khoá học
+  - quan_tam_web_front_end 
   - hoc_di_dong
   - muon_hoc_java
-  - hoi_gio_lam_viec
-  - co_so_ngoai_ha_noi
+
+  ## tư vấn chung
+  - bao_luu
+
+  ## tư vấn nghề
+  - hoi_co_hoi_xin_viec
+  - lo_lang_tuoi_cao_hoc_lap_trinh
+  - lo_lang_hoc_trai_nganh
+  - bo_doi_giai_ngu
 
 responses:
+
+  ## Chào hỏi thông thường
   utter_chao:
   - text: "Em chào anh/chị"
 
@@ -60,10 +94,10 @@ responses:
   - text: "Em cảm ơn anh/chị ạ"
 
   utter_khach_khong_vui:
-    - text: "Em xin lỗi khi làm anh/chị không vui"
+  - text: "Em xin lỗi khi làm anh/chị không vui"
 
   utter_yeu_cau_goi_so_hotline:
-    - text: "Anh/chị gọi hotline 0899 959 928 hoặc 0902 2090 11 để được tư vấn miễn phí nhé"
+  - text: "Anh/chị gọi hotline 0899 959 928 hoặc 0902 2090 11 để được tư vấn miễn phí nhé"
 
   utter_nhac_go_tieng_viet_co_dau:
   - text: "Anh/chị gõ tiếng Việt đúng ngữ pháp, em sẽ hiểu được tốt, trả lời nhanh hơn"
@@ -89,24 +123,11 @@ responses:
   utter_lich_khai_giang:
   - text: "Lịch khai giảng đây ạ https://techmaster.vn/trungtam/lich-khai-giang"
 
-  utter_co_hoi_xin_viec:
-  - text: "Techmaster chỉ dạy những kỹ năng có nhu cầu tuyển dụng rất cao. Anh/chị thử vào ITViec, TopDev gõ từ khoá mà xem."
-
-  utter_hoi_co_muon_hoc_luon_thang_nay:
-  - text: "Anh/chị có muốn đăng ký học luôn tháng này không?"
-
-  utter_yeu_cau_dang_ky_chuyen_khoan:
-  - text: "Anh/chị tạo tài khoản, sau đó mua khoá học và chuyển khoản ngân hàng. Em sẽ chuyển anh chị vào lớp khi nhận được chuyển khoản"
-
-  utter_cho_so_tai_khoan_ngan_hang:
-  - text: "Đây là tài khoản: Công ty TNHH Techmaster Việt Nam. Số tài khoản: 0021000252385. Ngân hàng Vietcombank chi nhánh Hà Nội"
-
-  utter_yeu_cau_ghi_ro_so_di_dong_khi_chuyen_khoan:
-  - text: "Anh/chị ghi rõ số di động cá nhân trong mô tả chuyển khoản nhé"
 
   utter_hoi_can_ho_tro_gi_them:
   - text: "Anh/chị cần em hỗ trợ gì thêm không ạ?"
-
+  
+  ## Tán tỉnh bot
   utter_cho_ten_bot:
   - text: "Em tên là Trương Minh Thuý"
 
@@ -132,23 +153,49 @@ responses:
   - text: "Em ở 14 ngõ 4 Nguyễn Đình Chiểu hoặc tầng 12A, Viwaseen, 48 Tố Hữu. Mời anh/chị ghé thăm"
 
   utter_moi_den_van_phong:
-  - text: "Mời anh/chị qua văn phòng Techmaster ở 14 ngõ 4 Nguyễn Đình Chiểu hoặc tầng 12A, Viwaseen, 48 Tố Hữu"
+  - text: "Hiện em đang làm việc. Mời anh qua 14 ngõ 4 Nguyễn Đình Chiểu hoặc tầng 12A, Viwaseen, 48 Tố Hữu"
 
   utter_nhac_khach_hang_tap_trung:
   - text: "Anh/chị hỏi em về khoá học đi ạ"
 
+  ## Mua khoá học
+  utter_hoi_co_muon_hoc_luon_thang_nay:
+  - text: "Anh/chị có muốn đăng ký học luôn tháng này không?"
+  
+  utter_yeu_cau_dang_ky_chuyen_khoan:
+  - text: "Anh/chị tạo tài khoản, sau đó mua khoá học và chuyển khoản ngân hàng. Em sẽ chuyển anh chị vào lớp khi nhận được chuyển khoản"
+  
+  utter_cho_so_tai_khoan_ngan_hang:
+  - text: "Đây là tài khoản: Công ty TNHH Techmaster Việt Nam. Số tài khoản: 0021000252385. Ngân hàng Vietcombank chi nhánh Hà Nội"
+  
+  utter_yeu_cau_ghi_ro_so_di_dong_khi_chuyen_khoan:
+  - text: "Anh/chị ghi rõ số di động cá nhân trong mô tả chuyển khoản nhé"
+
   utter_tra_loi_khach_muon_dong_tien_mat:
   - text: "Đang có dịch COVID, anh/chị nên chuyển khoản ngân hàng cho an toàn, tiện lợi ạ"
 
+  ## Hỏi trung tâm
   utter_tra_loi_giang_vien_la_ai:
   - text: "Giảng viên Techmaster phải có tối thiểu 4 năm kinh nghiệm, trung bình là 6 năm, có kỹ năng sư phạm tốt"
 
+  utter_tra_loi_co_so_ngoai_ha_noi:
+  - text: "Hiện Techmaster chỉ có 2 cơ sở đào tạo ở Hà nội thôi ạ"
+
+  ## Tư vấn nghề
   utter_dong_vien_hv_cao_tuoi:
   - text: "Anh/chị đừng quá lo. Chỉ cần chăm chỉ, học đúng phương pháp là theo được. Nhiều anh/chị lớn tuổi học thành công ở Techmaster rồi ạ"
 
   utter_dong_vien_trai_nganh:
   - text: "Anh/chị cứ yên tâm. Techmaster dạy từ đầu, và có phương pháp đào tạo dễ hiểu, trực quan, có giáo trình trực tuyến. Giảng viên nhiệt tình"
 
+  utter_co_hoi_xin_viec:
+  - text: "Techmaster chỉ dạy những kỹ năng có nhu cầu tuyển dụng rất cao. Anh/chị thử vào ITViec, TopDev gõ từ khoá mà xem."
+
+  utter_uu_dai_bo_doi_giai_ngu:
+  - text: "Techmaster ưu đãi 20% học phí lớp thực tập dài hạn cho bộ đội giải ngũ. Nhiều anh bộ đội đã học và xin được việc rồi ạ"
+
+
+  ## Tư vấn khoá học
   utter_cac_lop_di_dong:
   - text: "Hiện Techmaster tập trung dạy React Native và Flutter. IOS và Android dạy khi có yêu cầu của doanh nghiệp"
 
@@ -162,9 +209,17 @@ responses:
   - text: "Techmaster mở từ thứ 2 đến thứ 7. Sáng từ 9:00 đến 12:00, chiều 2:00 đến 6:00, tối 6:30 đến 9:30"
 
 
-  utter_tra_loi_co_so_ngoai_ha_noi:
-  - text: "Hiện Techmaster chỉ có 2 cơ sở đào tạo ở Hà nội thôi ạ"
+  ## Tư vấn chung
+  utter_quy_dinh_bao_luu:
+  - text: "Để bao lưu anh email đến support@techmaster.vn và cuong@techmaster.vn ghi rõ thông tin cá nhân, nguyên nhân bảo lưu. Techmaster cho phép bảo lưu tối đa trong 6 tháng. Lệ phí quản lý là 200k nếu học tiếp từ buổi nghỉ. Nếu học lại từ đầu sẽ phải đóng bổ xung học phí"
 
+
+  ## Xúc Phạm
+  utter_phan_ung_bi_khach_chui:
+  - text: "Anh/chị nhẹ nhàng. Em sẽ học hỏi dần để trả lời anh/chị tốt hơn"
+
+  utter_phan_ung_ham_doa:
+  - text: "Anh/chị bình tĩnh. Nội dung chat đã được ghi lại đấy ạ. Nếu có gì em chưa phải mong anh chị thứ lỗi"
 
 actions:
   - action_hoi_gio

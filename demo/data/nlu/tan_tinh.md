@@ -72,6 +72,8 @@
 - hẹn đi chơi
 - vào nhà nghỉ
 - đi nhà nghỉ
+- đi khách sạn không
+- qua đêm không?
 
 ## intent: to_tinh
 - thích em

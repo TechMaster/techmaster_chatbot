@@ -15,24 +15,10 @@
 - học từ đầu
 - chưa bao giờ
 
-
-
-
-## intent: hoi_lich_khai_giang
-- sắp tới có những khóa học nào
-- muốn đăng ký một khoá học
-- tháng này có lớp nào mở
-- sắp tới có khoá học nào
-- lịch khai giảng tháng này
-- lịch khai giảng
-- cho mình lịch khai giảng
-- bao giờ học
-- bao giờ khai giảng
   
-
-
-
-
-
 ## intent: bao_luu
-
+- muốn xin bảo lưu
+- cần bảo lưu
+- quy định bảo lưu
+- hỏi về bảo lưu
+- bảo lưu thì làm thế nào

@@ -60,4 +60,8 @@
 - xin việc dễ không
 
 ## intent: bo_doi_giai_ngu
-
+- bộ đội có học được
+- giải ngũ có ưu đãi
+- bộ đội giải ngũ
+- sỹ quan quân đội
+- bộ đội phục viên
