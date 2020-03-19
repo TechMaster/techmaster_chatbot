@@ -1,0 +1,22 @@
+## intent: che_bot_ngu
+- mày ngu lắm
+- không hiểu ý tao nói à
+- bot này cứ lải nhải
+- chậm hiểu thế
+- não bé à
+- sao ngu vậy
+- nói đéo hiểu
+- mày chậm hiểu
+- đồ ngu
+- bot lởm
+- nói như con robot
+- nói như cái máy
+- fuck you
+- đm mày
+- địt mẹ
+- địt cụ
+- con chó
+- làm ăn như cứt
+- con phò
+- như lồn
+- đồ chó

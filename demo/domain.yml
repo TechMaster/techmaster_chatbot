@@ -1,0 +1,171 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - chao
+  - tam_biet
+  - hoi_gio
+  - hoi_ngay
+  - xac_nhan
+  - tu_choi
+  - vui
+  - khong_vui
+  - cam_on
+  - can_tu_van
+  - nguoi_bat_dau
+  - nghi_la_bot
+  - hoi_lich_khai_giang
+  - hoi_co_hoi_xin_viec
+  - quan_tam_web_front_end
+  - che_bot_ngu
+  - khen_bot
+  - hoi_ten_bot
+  - hoi_tuoi
+  - hoi_que_quan
+  - hoi_co_nguoi_yeu_chua
+  - hoi_nha_o_dau
+  - hoi_gioi_tinh
+  - xin_so_dien_thoai
+  - xin_so_hot_line
+  - hoi_bot_hoc_o_dau
+  - muon_gap_em
+  - to_tinh
+  - muon_dang_ky_hoc
+  - hoi_cach_mua_khoa_hoc
+  - muon_dong_tien_mat
+  - giang_vien_la_ai
+  - lo_lang_tuoi_cao_hoc_lap_trinh
+  - lo_lang_hoc_trai_nganh
+  - hoi_hoc_o_dau
+  - hoc_di_dong
+  - muon_hoc_java
+  - hoi_gio_lam_viec
+  - co_so_ngoai_ha_noi
+
+responses:
+  utter_chao:
+  - text: "Em chào anh/chị"
+
+  utter_hoi_ten:
+  - text: "Anh/chị làm ơn cho em biết họ và tên đầy đủ"
+
+  utter_khach_vui:
+  - text: "Dạ"
+
+  utter_fallback:
+  - text: Em xin lỗi, em chưa hiểu ý anh/chị. Anh/chị gõ lại đơn giản hơn được không ạ"
+
+  utter_cam_on:
+  - text: "Em cảm ơn anh/chị ạ"
+
+  utter_khach_khong_vui:
+    - text: "Em xin lỗi khi làm anh/chị không vui"
+
+  utter_yeu_cau_goi_so_hotline:
+    - text: "Anh/chị gọi hotline 0899 959 928 hoặc 0902 2090 11 để được tư vấn miễn phí nhé"
+
+  utter_nhac_go_tieng_viet_co_dau:
+  - text: "Anh/chị gõ tiếng Việt đúng ngữ pháp, em sẽ hiểu được tốt, trả lời nhanh hơn"
+
+  utter_kinh_nghiem_hien_co:
+  - text: "Anh/chị đã học lập trình hay lập trình bao giờ chưa?"
+
+  utter_hoi_nhu_cau_hoc:
+  - text: "Anh/chị học lớp ngắn hạn 12 buổi hay thực tập dài hạn?"
+
+  utter_tu_van_thuc_tap:
+  - text: "Vậy anh/chị nên đăng ký thực tập khoá học dài hạn 6 đến 18 tháng sẽ tốt hơn"
+
+  utter_lua_chon_chuyen_nganh:
+  - text: "Techmaster đào tạo Web Front End, Web FullStack, Di động và AI. Anh/chị quan tâm chuyên ngành nào?"
+
+  utter_thuc_tap_6_thang:
+  - text: "Khoá sẽ học trong 6 tháng, mỗi tuần 3 buổi, mỗi buổi 3 tiếng thực hành"
+
+  utter_gioi_thieu_thuc_tap_web_front_end:
+  - text: "Web Front end sẽ đào tạo lập trình viên thiết kế web site. Nhu cầu tuyển dụng tốt, học đến đâu nhìn thấy sản phẩm đến đâu"
+
+  utter_lich_khai_giang:
+  - text: "Lịch khai giảng đây ạ https://techmaster.vn/trungtam/lich-khai-giang"
+
+  utter_co_hoi_xin_viec:
+  - text: "Techmaster chỉ dạy những kỹ năng có nhu cầu tuyển dụng rất cao. Anh/chị thử vào ITViec, TopDev gõ từ khoá mà xem."
+
+  utter_hoi_co_muon_hoc_luon_thang_nay:
+  - text: "Anh/chị có muốn đăng ký học luôn tháng này không?"
+
+  utter_yeu_cau_dang_ky_chuyen_khoan:
+  - text: "Anh/chị tạo tài khoản, sau đó mua khoá học và chuyển khoản ngân hàng. Em sẽ chuyển anh chị vào lớp khi nhận được chuyển khoản"
+
+  utter_cho_so_tai_khoan_ngan_hang:
+  - text: "Đây là tài khoản: Công ty TNHH Techmaster Việt Nam. Số tài khoản: 0021000252385. Ngân hàng Vietcombank chi nhánh Hà Nội"
+
+  utter_yeu_cau_ghi_ro_so_di_dong_khi_chuyen_khoan:
+  - text: "Anh/chị ghi rõ số di động cá nhân trong mô tả chuyển khoản nhé"
+
+  utter_hoi_can_ho_tro_gi_them:
+  - text: "Anh/chị cần em hỗ trợ gì thêm không ạ?"
+
+  utter_cho_ten_bot:
+  - text: "Em tên là Trương Minh Thuý"
+
+  utter_tra_loi_tuoi:
+  - text: "Em năm nay 18 tuổi"
+
+  utter_tra_loi_co_nguoi_yeu_chua:
+  - text: "Em đang học nên tập trung học thôi ạ"
+
+  utter_tra_loi_gioi_tinh:
+  - text: "Em là nữ, tên gái"
+
+  utter_tra_loi_hoi_que_quan:
+  - text: "Quê em gốc ở Thanh Hoá. Nhưng nhà em lên Hà nội hơn 100 năm trước rồi ạ"
+
+  utter_cho_so_dien_thoai:
+  - text: "Số di động của em đây ạ 096 798 3563. Em chỉ trả lời thắc mắc về khoá học thôi nhé"
+
+  utter_tra_loi_bot_hoc_o_dau:
+  - text: "Em học Đại học Ngoại Thương, khoa Quan Hệ Quốc Tế, năm nhất ạ"
+
+  utter_tra_loi_hoi_nha_o_dau:
+  - text: "Em ở 14 ngõ 4 Nguyễn Đình Chiểu hoặc tầng 12A, Viwaseen, 48 Tố Hữu. Mời anh/chị ghé thăm"
+
+  utter_moi_den_van_phong:
+  - text: "Mời anh/chị qua văn phòng Techmaster ở 14 ngõ 4 Nguyễn Đình Chiểu hoặc tầng 12A, Viwaseen, 48 Tố Hữu"
+
+  utter_nhac_khach_hang_tap_trung:
+  - text: "Anh/chị hỏi em về khoá học đi ạ"
+
+  utter_tra_loi_khach_muon_dong_tien_mat:
+  - text: "Đang có dịch COVID, anh/chị nên chuyển khoản ngân hàng cho an toàn, tiện lợi ạ"
+
+  utter_tra_loi_giang_vien_la_ai:
+  - text: "Giảng viên Techmaster phải có tối thiểu 4 năm kinh nghiệm, trung bình là 6 năm, có kỹ năng sư phạm tốt"
+
+  utter_dong_vien_hv_cao_tuoi:
+  - text: "Anh/chị đừng quá lo. Chỉ cần chăm chỉ, học đúng phương pháp là theo được. Nhiều anh/chị lớn tuổi học thành công ở Techmaster rồi ạ"
+
+  utter_dong_vien_trai_nganh:
+  - text: "Anh/chị cứ yên tâm. Techmaster dạy từ đầu, và có phương pháp đào tạo dễ hiểu, trực quan, có giáo trình trực tuyến. Giảng viên nhiệt tình"
+
+  utter_cac_lop_di_dong:
+  - text: "Hiện Techmaster tập trung dạy React Native và Flutter. IOS và Android dạy khi có yêu cầu của doanh nghiệp"
+
+  utter_huong_dan_dang_ky_hoc:
+  - text: "Anh/chị xem thông tin chi tiết khoá học. Lớp nào có lịch khai giảng trong tháng, thông tin hiện trên đầu. Lớp nào chưa có lịch thì anh/chị gọi trực tiếp số hot line"
+
+  utter_tra_loi_muon_hoc_java:
+  - text: "Techmaster có 3 khoá học Java: Java căn bản 10 buổi, Java nâng cao 10 buổi, Java Spring Boot 12 buổi và một lộ trình thực tập Java Web FullStack 6 tháng"
+
+  utter_tra_loi_hoi_gio_lam_viec:
+  - text: "Techmaster mở từ thứ 2 đến thứ 7. Sáng từ 9:00 đến 12:00, chiều 2:00 đến 6:00, tối 6:30 đến 9:30"
+
+
+  utter_tra_loi_co_so_ngoai_ha_noi:
+  - text: "Hiện Techmaster chỉ có 2 cơ sở đào tạo ở Hà nội thôi ạ"
+
+
+actions:
+  - action_hoi_gio
+  - action_hoi_ngay

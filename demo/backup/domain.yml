@@ -1,0 +1,64 @@
+intents:
+  - chao
+  - tam_biet
+  - xac_nhan
+  - tu_choi
+  - vui
+  - khong_vui
+  - can_tu_van
+  - nguoi_bat_dau
+  - nghi_la_bot
+  - hoi_lick_khai_giang
+  - hoi_co_hoi_xin_viec
+  - quan_tam_web_front_end
+
+slots:
+  name:
+    type: text
+    initial_value: "anh/chị"
+
+responses:
+  utter_chao:
+  - text: "Em chào anh/chị"
+
+  utter_hoi_ten:
+  - text: "Anh/chị làm ơn cho em biết họ và tên đầy đủ"
+
+  utter_khach_vui:
+  - text: "Dạ"
+
+  utter_khach_khong_vui:
+    - text: "Em xin lỗi khi làm anh/chị không vui"
+
+  utter_hoi_ten:
+    - text: "Anh/chị cho em biết họ và tên đầy đủ"
+
+  utter_nhac_go_tieng_viet_co_dau:
+  - text: "Anh/chị gõ tiếng Việt đúng ngữ pháp, em sẽ hiểu được tốt, trả lời nhanh hơn"
+
+  utter_kinh_nghiem_hien_co:
+  - text: "Anh/chị đã học lập trình hay lập trình bao giờ chưa?"
+
+  utter_hoi_nhu_cau_hoc:
+  - text: "Anh/chị học lớp ngắn hạn 12 buổi hay thực tập dài hạn?"
+
+  utter_tu_van_thuc_tap:
+  - text: "Vậy anh/chị nên đăng ký thực tập khoá học dài hạn 6 đến 18 tháng sẽ tốt hơn"
+
+  utter_lua_chon_chuyen_nganh:
+  - text: "Techmaster đào tạo Web Front End, Web FullStack, Di động và AI. Anh/chị quan tâm chuyên ngành nào?"
+
+  utter_thuc_tap_6_thang:
+  - text: "Khoá sẽ học trong 6 tháng, mỗi tuần 3 buổi, mỗi buổi 3 tiếng thực hành"
+
+  utter_gioi_thieu_thuc_tap_web_front_end:
+  - text: "Web Front end sẽ đào tạo lập trình viên thiết kế web site. Nhu cầu tuyển dụng tốt, học đến đâu nhìn thấy sản phẩm đến đâu"
+
+  utter_lich_khai_giang:
+  - text: "Lịch khai giảng đây ạ https://techmaster.vn/trungtam/lich-khai-giang"
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
