@@ -76,6 +76,14 @@
 - bad
 - very bad
 
+## intent: hoi_tham
+- khoẻ không em
+- em thế nào
+- em ổn không
+- tình hình thế nào
+- khoẻ không
+- em ổn chứ
+
 ## intent:nghi_la_bot
 - em là bot à?
 - em là chat bot?

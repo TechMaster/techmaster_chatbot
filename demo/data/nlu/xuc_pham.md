@@ -35,12 +35,15 @@
 - mặt lồn
 
 ## intent: ham_doa_bot
-- đánh chết mày
-- đập chết mày
+- đánh mày
+- đập mày
 - rạch mặt mày
 - cho mày một chưởng
-- bắn chết mày
+- bắn mày
 - mày thích gì
 - tát cho một cái
 - tát vỡ mặt
 - thích ăn đòn không
+- giết mày
+- tẩn mày
+- đấm mày

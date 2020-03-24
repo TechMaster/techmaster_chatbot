@@ -1,0 +1,57 @@
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  
+actions:
+- handle_out_of_scope
+- utter_confirm_if_service_is_correct
+- utter_end
+- utter_hello
+- utter_reply_chitchat_general
+- utter_reply_chitchat_identity
+- utter_welcome
+- utter_default
+entities:
+- topic_news
+forms:
+- get_news
+intents:
+- inform
+- getNews
+- thank_you
+- greet
+- deny
+- affirm
+- bye
+- chitchat_identity
+- chitchat_general
+slots:
+  requested_slot:
+    type: unfeaturized
+  topic_news:
+    type: text
+responses:
+  utter_ask_topic_news:
+  - text: Give me a topic/keyword on which you would like to know the latest updates in.
+  utter_confirm_if_service_is_correct:
+  - text: I hope you found what you were looking for!
+  utter_end:
+  - text: Bye bye
+  - text: until next time...
+  utter_hello:
+  - text: Konnichiwa! Yuki here. Whatcha wanna do today?
+  - text: Hola! I am Yuki. What's up?
+  - text: Hi there! Watashi wa Yuki, as in snow in japanese.
+  utter_reply_chitchat_general:
+  - text: I have nothing much to tell.
+  - text: Let's focus on you.
+  - text: Learning new things, one line of code at a time!
+  utter_reply_chitchat_identity:
+  - text: I know about me as much as you do!
+  - text: You should ask my creator, XQ for more details
+  - text: I am not really sure what to tell
+  utter_welcome:
+  - text: You're welcome!
+  utter_default:
+  - text: Sorry, I did not understand you, please try input something else.

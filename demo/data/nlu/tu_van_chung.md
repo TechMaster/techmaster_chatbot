@@ -14,8 +14,9 @@
 - chưa biết gì
 - học từ đầu
 - chưa bao giờ
+- tư vấn khóa học
+- tư vấn người học trái ngành
 
-  
 ## intent: bao_luu
 - muốn xin bảo lưu
 - cần bảo lưu

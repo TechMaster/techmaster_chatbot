@@ -55,3 +55,23 @@
 - gv bao năm kinh nghiệm
 - gv là ai
 - ai là gv
+
+## intent: giam_doc_techmaster
+- ai là giám đốc
+- giám đốc Techmaster
+- người phụ trách
+- quản lý là ai
+- ai là quản lý
+- giám đốc là ai
+
+## intent: ma_so_thue
+- mã số thuế Techmaster
+- Techmaster có mã số thuế
+- mã số thuế trung tâm
+- trung tâm có mã số thuế
+
+## intent: thanh_lap_nam_nao
+- thành lập năm nào
+- năm sáng lập
+- hoạt động được mấy năm
+- năm thành lập

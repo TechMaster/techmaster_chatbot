@@ -18,3 +18,15 @@
 ## giang_vien_la_ai
 * giang_vien_la_ai
   - utter_tra_loi_giang_vien_la_ai
+
+## giam_doc_techmaster
+* giam_doc_techmaster
+  - utter_tra_loi_giam_doc_techmaster
+
+## ma_so_thue
+* ma_so_thue
+  - utter_ma_so_thue
+
+## thanh_lap_nam_nao
+* thanh_lap_nam_nao
+  - utter_thanh_lap_nam_nao

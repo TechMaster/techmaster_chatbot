@@ -18,6 +18,7 @@ intents:
   - vui
   - khong_vui
   - cam_on
+  - hoi_tham
   
   ## hỏi chung chung
   - hoi_gio
@@ -48,6 +49,7 @@ intents:
   
   ## lịch học khai giảng
   - hoi_lich_khai_giang
+  - khi_nao_techmaster_mo_lai
 
   ## hỏi trung tâm
   - hoi_hoc_o_dau
@@ -55,6 +57,9 @@ intents:
   - co_so_ngoai_ha_noi
   - giang_vien_la_ai
   - xin_so_hot_line
+  - giam_doc_techmaster
+  - ma_so_thue
+  - thanh_lap_nam_nao
 
   ## mua khoá học
   - muon_dang_ky_hoc
@@ -74,6 +79,11 @@ intents:
   - lo_lang_tuoi_cao_hoc_lap_trinh
   - lo_lang_hoc_trai_nganh
   - bo_doi_giai_ngu
+#--------
+slots:
+  name:
+    type: text
+    initial_value: "anh/chị"
 
 responses:
 
@@ -86,6 +96,8 @@ responses:
 
   utter_khach_vui:
   - text: "Dạ"
+  - text: "Vâng ạ"
+  - text: "Dạ vâng"
 
   utter_fallback:
   - text: Em xin lỗi, em chưa hiểu ý anh/chị. Anh/chị gõ lại đơn giản hơn được không ạ"
@@ -95,12 +107,19 @@ responses:
 
   utter_khach_khong_vui:
   - text: "Em xin lỗi khi làm anh/chị không vui"
+  - text: "Em xin lỗi anh/chị ạ"
+  - text: "Có gì anh/chị bỏ qua cho em nhé"
 
   utter_yeu_cau_goi_so_hotline:
   - text: "Anh/chị gọi hotline 0899 959 928 hoặc 0902 2090 11 để được tư vấn miễn phí nhé"
 
   utter_nhac_go_tieng_viet_co_dau:
   - text: "Anh/chị gõ tiếng Việt đúng ngữ pháp, em sẽ hiểu được tốt, trả lời nhanh hơn"
+
+  utter_tra_loi_hoi_tham:
+  - text: "Em cảm ơn anh/chị. Em khoẻ ạ"
+  - text: "Em ổn ạ. Em cảm ơn anh/chị"
+  - text: "Vui quá được khách hàng hỏi thăm. Em khoẻ ạ."
 
   utter_kinh_nghiem_hien_co:
   - text: "Anh/chị đã học lập trình hay lập trình bao giờ chưa?"
@@ -181,6 +200,15 @@ responses:
   utter_tra_loi_co_so_ngoai_ha_noi:
   - text: "Hiện Techmaster chỉ có 2 cơ sở đào tạo ở Hà nội thôi ạ"
 
+  utter_tra_loi_giam_doc_techmaster:
+  - text: "Giám đốc là chị Lê Minh Thu 0988997278 / thu@techmaster.vn. Giám đốc vận hành và công nghệ là thầy Trịnh Minh Cường - 0902209011 / cuong@techmaster.vn"
+
+  utter_ma_so_thue:
+  - text: "Mã số thuế của Techmaster là 0105392153. Đăng ký & quản lý bởi Chi cục Thuế Quận Hai Bà Trưng, Hà nội"
+
+  utter_thanh_lap_nam_nao:
+  - text: "Techmaster thành lập tháng 7/2011 ạ."
+
   ## Tư vấn nghề
   utter_dong_vien_hv_cao_tuoi:
   - text: "Anh/chị đừng quá lo. Chỉ cần chăm chỉ, học đúng phương pháp là theo được. Nhiều anh/chị lớn tuổi học thành công ở Techmaster rồi ạ"
@@ -213,7 +241,9 @@ responses:
   utter_quy_dinh_bao_luu:
   - text: "Để bao lưu anh email đến support@techmaster.vn và cuong@techmaster.vn ghi rõ thông tin cá nhân, nguyên nhân bảo lưu. Techmaster cho phép bảo lưu tối đa trong 6 tháng. Lệ phí quản lý là 200k nếu học tiếp từ buổi nghỉ. Nếu học lại từ đầu sẽ phải đóng bổ xung học phí"
 
-
+  ## Lịch học khai giảng
+  utter_khi_nao_techmaster_mo_lai:
+  - text: "Khi nào dịch COVID hết. Techmaster sẽ thông báo lịch mở lại trên web site và fan page ạ."
   ## Xúc Phạm
   utter_phan_ung_bi_khach_chui:
   - text: "Anh/chị nhẹ nhàng. Em sẽ học hỏi dần để trả lời anh/chị tốt hơn"
