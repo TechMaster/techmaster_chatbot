@@ -7,6 +7,8 @@
 - lịch khai giảng
 - cho mình lịch khai giảng
 - bao giờ học
+- lịch học
+- khi nào học
 - bao giờ khai giảng
 
 

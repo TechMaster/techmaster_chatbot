@@ -74,6 +74,7 @@
 - đi nhà nghỉ
 - đi khách sạn không
 - qua đêm không?
+- đi chơi với anh nhé
 
 ## intent: to_tinh
 - thích em
@@ -86,6 +87,8 @@
 - crush you
 - miss you
 - thích nói chuyện với em
+- em có thích anh không
+- em có yêu anh không
 
 ## intent: khen_bot
 - thông minh đó

@@ -1,9 +1,13 @@
 ## intent: can_tu_van
 - chào bạn, tư vấn giúp mình được không
-- tư vấn cho mình
+- tư vấn cho
 - hỏi về khoá học
 - tư vấn khoá học cho mình
 - cần học lập trình
+- muốn học lập trình
+- cần tư vấn
+- tư vấn giúp
+
   
 ## intent: nguoi_bat_dau
 - chưa học bao giờ

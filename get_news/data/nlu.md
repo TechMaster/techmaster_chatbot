@@ -64,7 +64,7 @@
 - I want to read something interesting
 - I want to read news
 - latest news about [machine learning](topic_news)
-- latest updates about [Taylor Swift](topic_news)
+- latest updates about [Taylor Swift](topic_news)rảmuo
 
 ## intent:greet
 - hey

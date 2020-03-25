@@ -45,6 +45,8 @@
 - lịch làm việc
 - thời gian làm việc
 - giờ làm việc
+- giờ làm việc ở Techmaster
+
 
 ## intent: giang_vien_la_ai
 - giảng viên là ai

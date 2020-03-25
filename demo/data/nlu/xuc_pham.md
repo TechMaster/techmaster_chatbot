@@ -8,6 +8,12 @@
 - nói đéo hiểu
 - mày chậm hiểu
 - đồ ngu
+- đồ điên
+- đồ hâm
+- con ngu
+- con điên
+- con phò
+- con hâm
 - bot lởm
 - nói như con robot
 - nói như cái máy

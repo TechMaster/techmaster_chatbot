@@ -8,6 +8,32 @@ policies:
     core_threshold: 0.3
     fallback_action_name: "action_default_fallback"
 
+entities:
+  - course
+
+slots:
+  requested_slot:
+    type: unfeaturized
+  can_tu_van:
+    type: bool
+  khoa_hoc:
+    type: text
+  kinh_nghiem:
+      type: categorical
+      values:
+      - bat_dau
+      - tung_lap_trinh
+      - dang_lap_trinh
+      - kinh_nghiem
+  hoc_van:
+      type: categorical
+      values:
+      - cap_1
+      - cap_2
+      - cap_3
+      - dai_hoc
+  
+
 
 intents:
   ## chào hỏi thông thường
@@ -70,6 +96,8 @@ intents:
   - quan_tam_web_front_end 
   - hoc_di_dong
   - muon_hoc_java
+  - muon_hoc_hack
+  - muon_hoc_AI
 
   ## tư vấn chung
   - bao_luu
@@ -80,10 +108,6 @@ intents:
   - lo_lang_hoc_trai_nganh
   - bo_doi_giai_ngu
 #--------
-slots:
-  name:
-    type: text
-    initial_value: "anh/chị"
 
 responses:
 
@@ -123,6 +147,7 @@ responses:
 
   utter_kinh_nghiem_hien_co:
   - text: "Anh/chị đã học lập trình hay lập trình bao giờ chưa?"
+  - text: "Anh/chị từng lập trình hay học CNTT chưa ạ?"
 
   utter_hoi_nhu_cau_hoc:
   - text: "Anh/chị học lớp ngắn hạn 12 buổi hay thực tập dài hạn?"
@@ -152,12 +177,16 @@ responses:
 
   utter_tra_loi_tuoi:
   - text: "Em năm nay 18 tuổi"
+  - text: "Em tròn 18"
 
   utter_tra_loi_co_nguoi_yeu_chua:
   - text: "Em đang học nên tập trung học thôi ạ"
+  - text: "Em còn trẻ, nên chưa có ý định kiếm bạn trai"
+  - text: "Ngượng quá, em chỉ tư vấn khoá học thôi nhé"
+  - text: "Anh nghiêm túc một chút được không, em chỉ trả lời hỏi đáp khoá học thôi đấy"
 
   utter_tra_loi_gioi_tinh:
-  - text: "Em là nữ, tên gái"
+  - text: "Em là Nữ, tên Gái"
 
   utter_tra_loi_hoi_que_quan:
   - text: "Quê em gốc ở Thanh Hoá. Nhưng nhà em lên Hà nội hơn 100 năm trước rồi ạ"
@@ -233,23 +262,34 @@ responses:
   utter_tra_loi_muon_hoc_java:
   - text: "Techmaster có 3 khoá học Java: Java căn bản 10 buổi, Java nâng cao 10 buổi, Java Spring Boot 12 buổi và một lộ trình thực tập Java Web FullStack 6 tháng"
 
-  utter_tra_loi_hoi_gio_lam_viec:
-  - text: "Techmaster mở từ thứ 2 đến thứ 7. Sáng từ 9:00 đến 12:00, chiều 2:00 đến 6:00, tối 6:30 đến 9:30"
+  utter_tra_loi_muon_hoc_hack:
+  - text: "Dạ Techmaster không đào tạo hacker, chỉ đào tạo lập trình viên thôi ạ"
+  - text: "Techmaster chưa mở khoá bảo mật, chỉ đào tạo lập trình viên thôi ạ."
 
+  utter_tra_loi_muon_hoc_AI:
+  - text: "Techmaster có 3 khoá học liên quan đến AI: Python căn bản phân tích dữ liệu, Xây dựng AI ChatBot, Deep Learning"
 
   ## Tư vấn chung
   utter_quy_dinh_bao_luu:
   - text: "Để bao lưu anh email đến support@techmaster.vn và cuong@techmaster.vn ghi rõ thông tin cá nhân, nguyên nhân bảo lưu. Techmaster cho phép bảo lưu tối đa trong 6 tháng. Lệ phí quản lý là 200k nếu học tiếp từ buổi nghỉ. Nếu học lại từ đầu sẽ phải đóng bổ xung học phí"
 
   ## Lịch học khai giảng
+  utter_tra_loi_hoi_gio_lam_viec:
+  - text: "Techmaster mở từ thứ 2 đến thứ 7. Sáng từ 9:00 đến 12:00, chiều 2:00 đến 6:00, tối 6:30 đến 9:30"
+
   utter_khi_nao_techmaster_mo_lai:
   - text: "Khi nào dịch COVID hết. Techmaster sẽ thông báo lịch mở lại trên web site và fan page ạ."
+  
   ## Xúc Phạm
   utter_phan_ung_bi_khach_chui:
-  - text: "Anh/chị nhẹ nhàng. Em sẽ học hỏi dần để trả lời anh/chị tốt hơn"
+  - text: "Anh/chị bình tĩnh được không. Em hiểu hết các ngôn từ đó đấy ạ"
+  - text: "Hình như hôm nay trời nóng, anh/chị đang cáu giận thì phải"
+  - text: "Yêu mọi người, tin vài người, đừng xúc phạm tới ai hết"
 
   utter_phan_ung_ham_doa:
   - text: "Anh/chị bình tĩnh. Nội dung chat đã được ghi lại đấy ạ. Nếu có gì em chưa phải mong anh chị thứ lỗi"
+  - text: "Ít ai thấy sự tài giỏi ở người đã xúc phạm mình"
+  - text: "Có những ngôn từ còn tồi tệ hơn chửi rủa, có những ngôn từ đem lại sự tổn thương"
 
 actions:
   - action_hoi_gio

@@ -10,3 +10,13 @@
 ## muon_hoc_java
 * muon_hoc_java
   - utter_tra_loi_muon_hoc_java
+
+## muon_hoc_hack
+* muon_hoc_hack
+  - utter_tra_loi_muon_hoc_hack
+  - utter_tu_van_thuc_tap
+  - utter_lua_chon_chuyen_nganh
+
+## muon_hoc_AI
+* muon_hoc_AI
+  - utter_tra_loi_muon_hoc_AI
