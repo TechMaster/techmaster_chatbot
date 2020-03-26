@@ -1,11 +1,43 @@
 # Bóc tách email từ người dùng
 
-## rasa/duckling
+## Chạy ứng dụng
 
-Để làm được việc này cần phải bật rasa/duckling lên
+### Khởi động Action Server
+```bash
+cd mailsub
+source venv/bin/activate
+rasa run actions
+```
+
+### Khởi động rasa/duckling, dùng để bóc tách email
 ```
 docker run -p 8000:8000 rasa/duckling
 ```
+### Tiến hành train model và chạy thử
+```bash
+cd mailsub
+source venv/bin/activate
+rasa train
+rasa shell
+```
+
+### Kịch bản chạy thử
+```
+Your input ->  hi
+Hey! How are you?
+Your input ->  subscribe newsletter
+please provide your email
+Your input ->  cuong@techmaster.vn
+Some one already use your email cuong@techmaster.vn
+Your input ->  subscribe me long@gmail.com
+long@gmail.com is subscribed successfully
+Your input ->  want to subscribe newsletter
+please provide your email
+Your input ->  lan@microsoft.com
+lan@microsoft.com is subscribed successfully
+```
+
+## Các cấu hình, mã quan trọng
 
 Trong config.yml cũng phải cấu hình như sau để bóc tách được email
 ```yaml
@@ -29,12 +61,12 @@ Sử dụng checkpoint ```> user_enter_email``` để nối tiếp logic
 
 ## email already subscribed
   > user_enter_email
-  - slot{"subscribed": "exist"}
+  - slot{"subscribed": false}
   - utter_email_existed
 
 ## email is newly subscribed
   > user_enter_email
-  - slot{"subscribed": "subscribe"}
+  - slot{"subscribed": true}
   - utter_confirm_email
 ```
 
@@ -51,13 +83,12 @@ actions:
   - action_subscribe_newsletter
 slots:
   subscribed:
-      type: categorical
-      values:
-      - none
-      - exist
-      - subscribe
+      type: bool     
   email:
-    type: unfeaturized
+    type: text
+    
+entities:
+  - email
 ```
 
 Custom Action to check email
@@ -70,8 +101,8 @@ class ActionSubscribeNewsletter(Action):
         email = tracker.get_slot('email')
         if email in ["cuong@techmaster.vn", "duy@techmaster.vn", "long@yahoo.com"]:          
           print('You already subscribed before')
-          return [SlotSet('subscribed', "exist")]
+          return [SlotSet('subscribed', False)]
         else:
           print('Subscribed now')
-          return [SlotSet('subscribed', "subscribe")]
+          return [SlotSet('subscribed', True)]
 ```

@@ -12,7 +12,7 @@ class ActionSubscribeNewsletter(Action):
         email = tracker.get_slot('email')
         if email in ["cuong@techmaster.vn", "duy@techmaster.vn", "long@yahoo.com"]:          
           print('You already subscribed before')
-          return [SlotSet('subscribed', "exist")]
+          return [SlotSet('subscribed', False)]
         else:
           print('Subscribed now')
-          return [SlotSet('subscribed', "subscribe")]
+          return [SlotSet('subscribed', True)]

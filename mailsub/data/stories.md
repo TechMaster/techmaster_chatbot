@@ -23,12 +23,12 @@
 
 ## email already subscribed
   > user_enter_email
-  - slot{"subscribed": "exist"}
+  - slot{"subscribed": false}
   - utter_email_existed
 
 ## email is newly subscribed
   > user_enter_email
-  - slot{"subscribed": "subscribe"}
+  - slot{"subscribed": true}
   - utter_confirm_email
 
 

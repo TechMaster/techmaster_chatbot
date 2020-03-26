@@ -14,13 +14,9 @@ actions:
   - action_subscribe_newsletter
 slots:
   subscribed:
-      type: categorical
-      values:
-      - none
-      - exist
-      - subscribe
+      type: bool     
   email:
-    type: unfeaturized
+    type: text
     
 entities:
   - email
