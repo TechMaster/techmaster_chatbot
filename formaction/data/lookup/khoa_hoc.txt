@@ -1,0 +1,26 @@
+IOS
+Android
+Java
+SpringBoot
+web front end
+HTML, CSS, JavaScript
+Nodes
+PHP
+Flutter
+Dart
+C
+C++
+Git
+Docker
+DevOps
+UI/UX
+Linux
+lập trình Web
+lập trình backend
+lập trình di động
+thiết kế web
+lập trình React Native
+React Native
+Angular
+React
+Vue

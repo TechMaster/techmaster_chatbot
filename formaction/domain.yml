@@ -1,0 +1,105 @@
+intents:
+  - chao
+  - tam_biet
+  - xac_nhan
+  - tu_choi
+  - vui
+  - khong_vui
+  - cam_on
+  - hoi_tham
+  - hoi_khoa_hoc
+  - nghi_la_bot
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+policies:
+  - name: "FallbackPolicy"
+    nlu_threshold: 0.4
+    core_threshold: 0.3
+    fallback_action_name: "action_default_fallback"
+
+entities:
+  - anh_chi
+  - ho_ten
+  - email
+  - mobile
+  - khoa_hoc
+
+slots:
+  anh_chi:
+    type: text
+    initial_value: "Anh/Chị"
+    
+  khoa_hoc:
+    type: text
+
+  ho_ten:
+    type: text
+
+  email:
+    type: text
+
+  mobile:
+    type: text
+
+  district:
+    type: categorical
+    values:
+    - Hoàn Kiếm
+    - Đống Đa
+    - Ba Đình
+    - Hai Bà Trưng
+    - Hoàng Mai
+    - Thanh Xuân
+    - Long Biên
+    - Nam Từ Liêm
+    - Bắc Từ Liêm
+    - Tây Hồ
+    - Cầu Giấy
+    - Hà Đông
+
+
+  
+responses:
+
+  ## Chào hỏi thông thường
+  utter_chao:
+  - text: "Em chào {anh_chi}"
+
+  utter_hoi_ten:
+  - text: "{anh_chi} làm ơn cho em biết họ và tên đầy đủ"
+
+  utter_khach_vui:
+  - text: "Dạ. {anh_chi} hài lòng, em cũng vui."
+  - text: "Rất vui vì {anh_chi} hài lòng"
+  - text: "Dạ vâng"
+
+  utter_fallback:
+  - text: Em xin lỗi, em chưa hiểu ý {anh_chi}. {anh_chi} gõ lại đơn giản hơn được không ạ"
+
+  utter_cam_on:
+  - text: "Em cảm ơn {anh_chi} ạ"
+
+  utter_khach_khong_vui:
+  - text: "Em xin lỗi khi làm {anh_chi} không vui"
+  - text: "Em xin lỗi {anh_chi} ạ"
+  - text: "Có gì {anh_chi} bỏ qua cho em nhé"
+
+  utter_tra_loi_hoi_tham:
+  - text: "Em cảm ơn {anh_chi}. Em khoẻ ạ"
+  - text: "Em ổn ạ. Em cảm ơn {anh_chi}"
+  - text: "Vui quá được khách hàng hỏi thăm. Em khoẻ ạ."
+
+  utter_hoi_can_ho_tro_gi_them:
+  - text: "{anh_chi} có cần hỗ trợ gì thêm không ạ?"
+
+  utter_tam_biet:
+  - text: "em chào {anh_chi} ạ"
+  - text: "tạm biệt {anh_chi}"
+
+  utter_nghi_la_bot:
+  - text: "Em mà là bot, em là con chó"
+  - text: "{anh_chi} không tin em à :("
+  - text: "Bot mà như thế này là hơi kinh đấy"
