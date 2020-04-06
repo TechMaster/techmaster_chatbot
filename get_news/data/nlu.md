@@ -42,6 +42,9 @@
 - not this
 - False
 
+## lookup:topic_news
+data/test/lookup_tables/topic_news.txt
+
 ## intent:getNews
 - Send me latest news updates
 - I want to read some news
@@ -64,7 +67,7 @@
 - I want to read something interesting
 - I want to read news
 - latest news about [machine learning](topic_news)
-- latest updates about [Taylor Swift](topic_news)rảmuo
+- latest updates about [Taylor Swift](topic_news)
 
 ## intent:greet
 - hey
