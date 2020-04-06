@@ -165,9 +165,4 @@ class PersonForm(FormAction):
         return []
 
 ```
-  - name: DucklingHTTPExtractor
-    url: http://localhost:8000
-    dimensions:
-      - email
-      - number
-      - amount-of-money
+ 

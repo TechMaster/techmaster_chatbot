@@ -8,6 +8,12 @@ pipeline:
     analyzer: "char_wb"
     min_ngram: 1
     max_ngram: 4
+  - name: DucklingHTTPExtractor
+    url: http://localhost:8000
+    dimensions:
+    - email
+    - number
+    - amount-of-money
   - name: DIETClassifier
     epochs: 100
   - name: EntitySynonymMapper

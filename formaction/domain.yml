@@ -7,7 +7,9 @@ intents:
   - khong_vui
   - cam_on
   - hoi_tham
-  - hoi_khoa_hoc
+  - hoi_khoa_hoc:
+      use_entities:
+        - khoa_hoc
   - nghi_la_bot
 
 session_config:
@@ -103,3 +105,6 @@ responses:
   - text: "Em mà là bot, em là con chó"
   - text: "{anh_chi} không tin em à :("
   - text: "Bot mà như thế này là hơi kinh đấy"
+
+  utter_hoi_khoa_hoc:
+  - text: "{anh_chi} cần hỏi về {khoa_hoc} này đúng không ạ?"

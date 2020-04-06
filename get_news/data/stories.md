@@ -8,7 +8,6 @@
     - form: get_news
     - slot{"topic_news": "sports"}
     - form{"name": null}
-    hi
     - action_restart
 
 ## thankyou (general)    
