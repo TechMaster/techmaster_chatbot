@@ -10,7 +10,8 @@ Mục tiêu làm sao bóc tách được keyword trong đoạn hội thoại c�
 Một số Entity Extractor Components được thử nghiệm cho thấy công dụng của từng loại như sau:
 
 ## Bóc tách từ khoá được định nghĩa trong nlu hoặc lookup table
-- DIETClassifier: phù hợp khi từ khoá được đánh dấu là entity ngay trong nlu.md. Tuy nhiên DIETClassifier lại không thể bóc tác từ khoá được liệt kê trong Lookup Table
+- DIETClassifier: phù hợp khi từ khoá được đánh dấu là entity ngay trong nlu.md. Tuy nhiên DIETClassifier lại không thể bóc tác từ khoá được liệt kê trong Lookup Table [data/test/lookup_tables/topic_news.txt](data/test/lookup_tables/topic_news.txt)
+  
 ```markdown
 - what happend [covid](topic_news)
 - news about [boris johnson](topic_news)
@@ -56,7 +57,7 @@ latest news science
     epochs: 100
 ```
 
-Ở đây từ khoá Hanoi được liệt kê trong lookup table
+Ở đây từ khoá Hanoi được liệt kê trong lookup table [data/test/lookup_tables/topic_news.txt](data/test/lookup_tables/topic_news.txt)
 ```json
 news in Hanoi
 {
