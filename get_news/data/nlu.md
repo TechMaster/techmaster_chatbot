@@ -45,7 +45,10 @@
 ## lookup:topic_news
 data/test/lookup_tables/topic_news.txt
 
+
 ## intent:getNews
+- what happend [covid](topic_news)
+- news about [boris johnson](topic_news)
 - Send me latest news updates
 - I want to read some news
 - give me current affairs
@@ -53,7 +56,7 @@ data/test/lookup_tables/topic_news.txt
 - Find some interesting news
 - News please
 - Get me latest updates in [science](topic_news)
-- latest updates in [sports](topic_news)
+- latest update [sports](topic_news)
 - whats the latest news in [business](topic_news)
 - send news updates
 - Fetch some news
@@ -65,9 +68,9 @@ data/test/lookup_tables/topic_news.txt
 - get me latest updates in [astronomy](topic_news)
 - any interesting updates in [physics](topic_news)
 - I want to read something interesting
-- I want to read news
-- latest news about [machine learning](topic_news)
-- latest updates about [Taylor Swift](topic_news)
+- I want to news in [covid19](topic_news)
+- latest news [machine learning](topic_news)
+- latest updates [Taylor Swift](topic_news)
 
 ## intent:greet
 - hey

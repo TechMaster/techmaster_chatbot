@@ -4,10 +4,12 @@ language: en
 pipeline:
   - name: SpacyNLP
   - name: SpacyTokenizer
-  - name: SpacyFeaturizer
   - name: RegexFeaturizer
-  - name: SpacyEntityExtractor
   - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: SpacyEntityExtractor
+  - name: CRFEntityExtractor
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"

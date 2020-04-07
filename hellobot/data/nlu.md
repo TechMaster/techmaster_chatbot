@@ -54,3 +54,18 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+## intent:ask_age
+- how old are you?
+- your age?
+- are you 20 years old.
+- when were you born?
+
+## intent:ask_time
+- what time is it
+- time?
+- tell me time
+
+## intent:ask_date
+- what is today date?
+- what is date?

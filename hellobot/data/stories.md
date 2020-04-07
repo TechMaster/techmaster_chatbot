@@ -29,3 +29,15 @@
 ## bot challenge
 * bot_challenge
   - utter_iamabot
+
+## ask bot's age
+* ask_age
+  - utter_answer_age
+
+## ask time
+* ask_time
+  - action_hoi_gio
+
+## ask date
+* ask_date
+  - action_hoi_ngay
